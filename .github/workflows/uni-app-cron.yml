@@ -21,8 +21,10 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - run: cd scripts/uni-crontab/ && npm ci
-    - run: cd scripts/uni-crontab/ && node scripts/crontab.js
+    - run: npm ci
+        working-directory: scripts/uni-crontab
+    - run: node index.js
+        working-directory: scripts/uni-crontab
 		env:
 	    APP_KEY: ${{ secrets.UNI_CRON_APP_KEY }}
     #- run: npm run build --if-present
