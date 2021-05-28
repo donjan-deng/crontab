@@ -2,8 +2,8 @@ name: uni-app 定时任务
 
 on:
 	workflow_dispatch:
-    schedule:
-        - cron: "*/5 8-16 * * *" # 服务器是UTC时间，实则凌晨0-8点执行
+  schedule:
+    - cron: "*/5 8-16 * * *" # 服务器是UTC时间，实则凌晨0-8点执行
 
 jobs:
   build:
